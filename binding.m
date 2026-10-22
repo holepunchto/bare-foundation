@@ -2,6 +2,7 @@
 #import <bare.h>
 #import <js.h>
 
+#import "lib/process-info.h"
 #import "lib/run-loop.h"
 
 static js_value_t *
@@ -24,6 +25,9 @@ bare_foundation_exports(js_env_t *env, js_value_t *exports) {
   V("registrySize", bare_foundation_registry_size)
   V("handle", bare_foundation_handle)
   V("adopt", bare_foundation_adopt)
+
+  V("processInfoProcessInfo", bare_foundation_process_info_process_info)
+  V("processInfoSystemUptime", bare_foundation_process_info_system_uptime)
 
   V("runLoopMain", bare_foundation_run_loop_main)
   V("runLoopCurrent", bare_foundation_run_loop_current)
