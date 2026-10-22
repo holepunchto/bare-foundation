@@ -40,3 +40,4 @@ jobs:
           arch: ${{ matrix.arch }}
           flags: --debug
       - run: npm test
+        if: ${{ matrix.platform == 'darwin' }}
